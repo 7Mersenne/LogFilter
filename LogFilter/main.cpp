@@ -27,24 +27,27 @@
 	along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include <iostream>
-#include <fstream>
-//#include <stdio.h>
+#include <stdlib.h>
+#include <stdio.h>
 using namespace std;
-
-const char strDefaultInFilePath[100] = {"thorium.log"};
-const char strDefaultOutFilePath[100] = { "filter_out.log" };
-const int LineLength = 4096;
-char buff[LineLength];
 
 #include "LogFilter.h"
 using namespace Septem;
 
 int main()
 {
-	CLogFilter logFilter("thorium.log", "filter_out.log");
+	const char *charaList[] = { "[0] : psr =", "[1] : psr =", "[2] : psr =", "[3] : psr =", "[4] : psr =" };
+	size_t length = sizeof(charaList) / sizeof(char*);
 	
-	logFilter.Run();
+	char outFilePath[256] = { "filter_out.log" };
+
+	for(size_t i=0;i<length;++i)
+	{
+		sprintf_s<256>(outFilePath, "output/filter_psr_%d.log", i);
+		CLogFilter logFilter("input/thorium.log", outFilePath, charaList[i]);
+		logFilter.Run();
+	}
+	
 
 	system("pause");
 	return 0;

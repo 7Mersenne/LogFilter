@@ -40,15 +40,15 @@ namespace Septem {
 	{
 		strcpy_s<256>(sInFile, "in.txt");
 		strcpy_s<256>(sOutFile, "out.txt");
-		strcpy_s<256>(sMatchChara, "[0] : psr =");
+		strcpy_s<256>(sMatchChara, "[0] filt");
 		memset(buff, 0, sizeof(buff));
 	}
 
-	CLogFilter::CLogFilter(const char * in, const char * out)
+	CLogFilter::CLogFilter(const char * in, const char * out, const char * chara)
 	{
 		strcpy_s<256>(sInFile, in);
 		strcpy_s<256>(sOutFile, out);
-		strcpy_s<256>(sMatchChara, "[0] : psr =");
+		strcpy_s<256>(sMatchChara, chara);
 		memset(buff, 0, sizeof(buff));
 	}
 
@@ -72,15 +72,18 @@ namespace Septem {
 
 
 		fin.open(sInFile);
+		
 
 		if (fin.is_open()) {
 			fout.open(sOutFile);
-
 			if (fout.is_open())
 			{
-				const char* pMatch = strstr(buff, sMatchChara);
-				if (pMatch)
-					fout << pMatch << endl;
+				while (fin.getline(buff, LineLength))
+				{
+					const char* pMatch = strstr(buff, sMatchChara);
+					if (pMatch)
+						fout << pMatch << endl;
+				}
 				fout.close();
 			}
 

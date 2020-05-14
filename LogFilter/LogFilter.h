@@ -35,7 +35,7 @@ namespace Septem
 	{
 	public:
 		CLogFilter();
-		CLogFilter(const char* in, const char * out);
+		CLogFilter(const char* in, const char * out, const char* chara);
 
 		bool Init(const char* InMatchChara);
 		void Run();

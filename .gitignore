@@ -1,3 +1,13 @@
+# CPP
+LogFilter/.vs/*
+LogFilter/Debug/*
+*db
+*opendb
+*ipch
+
+# Log
+*.log
+
 # Prerequisites
 *.d
 
