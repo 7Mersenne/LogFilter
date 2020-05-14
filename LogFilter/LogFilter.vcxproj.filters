@@ -27,12 +27,12 @@
     <ClCompile Include="main.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="LogFilter.cpp">
+    <ClCompile Include="Private\LogFilter.cpp">
       <Filter>LogFilter\Private</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="LogFilter.h">
+    <ClInclude Include="Public\LogFilter.h">
       <Filter>LogFilter\Public</Filter>
     </ClInclude>
   </ItemGroup>

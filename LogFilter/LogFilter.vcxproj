@@ -115,11 +115,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="LogFilter.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Private\LogFilter.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="LogFilter.h" />
+    <ClInclude Include="Public\LogFilter.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

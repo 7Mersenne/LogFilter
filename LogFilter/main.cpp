@@ -31,7 +31,7 @@
 #include <stdio.h>
 using namespace std;
 
-#include "LogFilter.h"
+#include "Public/LogFilter.h"
 using namespace Septem;
 
 int main()

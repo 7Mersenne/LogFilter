@@ -1,9 +1,11 @@
 # CPP
 LogFilter/.vs/*
 LogFilter/Debug/*
+LogFilter/x64/*
 *db
 *opendb
 *ipch
+*.tlog
 
 # Log
 *.log
