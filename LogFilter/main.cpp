@@ -36,16 +36,82 @@ using namespace Septem;
 
 int main()
 {
-	const char *charaList[] = { "[0] : psr =", "[1] : psr =", "[2] : psr =", "[3] : psr =", "[4] : psr =" };
-	size_t length = sizeof(charaList) / sizeof(char*);
-	
-	char outFilePath[256] = { "filter_out.log" };
-
-	for(size_t i=0;i<length;++i)
 	{
-		sprintf_s<256>(outFilePath, "output/filter_psr_%d.log", i);
-		CLogFilter logFilter("input/thorium.log", outFilePath, charaList[i]);
-		logFilter.Run();
+		const char *charaList[] = {
+		"[1] : config:"
+		};
+		size_t length = sizeof(charaList) / sizeof(char*);
+
+		char outFilePath[256] = { "filter_out.log" };
+
+		for (size_t i = 0; i < length; ++i)
+		{
+			sprintf_s<256>(outFilePath, "output/filter_config_%d.log", i);
+			CLogFilter logFilter("input/thorium.log", outFilePath, charaList[i]);
+			logFilter.Run();
+		}
+	}
+
+	{
+		const char *charaList[] = {
+		"[0] : psr =",
+		"[1] : psr =",
+		"[2] : psr =",
+		"[3] : psr =",
+		"[4] : psr =",
+		"[5] : psr =",
+		"[6] : psr =",
+		"[7] : psr =",
+		"[8] : psr =",
+		"[9] : psr =",
+		"[10] : psr =",
+		"[11] : psr =",
+		"[12] : psr =",
+		"[13] : psr =",
+		"[14] : psr =",
+		"[15] : psr ="
+		};
+		size_t length = sizeof(charaList) / sizeof(char*);
+
+		char outFilePath[256] = { "filter_out.log" };
+
+		for (size_t i = 0; i < length; ++i)
+		{
+			sprintf_s<256>(outFilePath, "output/filter_psr_%d.log", i);
+			CLogFilter logFilter("input/thorium.log", outFilePath, charaList[i]);
+			logFilter.Run();
+		}
+	}
+
+	{
+		const char *charaList[] = {
+		"[0] : frame ",
+		"[1] : frame ",
+		"[2] : frame ",
+		"[3] : frame ",
+		"[4] : frame ",
+		"[5] : frame ",
+		"[6] : frame ",
+		"[7] : frame ",
+		"[8] : frame ",
+		"[9] : frame ",
+		"[10] : frame ",
+		"[11] : frame ",
+		"[12] : frame ",
+		"[13] : frame ",
+		"[14] : frame ",
+		"[15] : frame "
+		};
+		size_t length = sizeof(charaList) / sizeof(char*);
+
+		char outFilePath[256] = { "filter_out.log" };
+
+		for (size_t i = 0; i < length; ++i)
+		{
+			sprintf_s<256>(outFilePath, "output/filter_frame_psr_%d.log", i);
+			CLogFilter logFilter("input/thorium.log", outFilePath, charaList[i]);
+			logFilter.Run();
+		}
 	}
 	
 
