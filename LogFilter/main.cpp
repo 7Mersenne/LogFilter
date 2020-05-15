@@ -38,6 +38,7 @@ int main()
 {
 	{
 		const char *charaList[] = {
+		"[0] : config:",
 		"[1] : config:"
 		};
 		size_t length = sizeof(charaList) / sizeof(char*);
