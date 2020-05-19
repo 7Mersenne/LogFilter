@@ -70,7 +70,11 @@ int main()
 		"[12] : psr =",
 		"[13] : psr =",
 		"[14] : psr =",
-		"[15] : psr ="
+		"[15] : psr =",
+		"[16] : psr =",
+		"[17] : psr =",
+		"[18] : psr =",
+		"[19] : psr ="
 		};
 		size_t length = sizeof(charaList) / sizeof(char*);
 
@@ -101,7 +105,11 @@ int main()
 		"[12] : frame ",
 		"[13] : frame ",
 		"[14] : frame ",
-		"[15] : frame "
+		"[15] : frame ",
+		"[16] : frame ",
+		"[17] : frame ",
+		"[18] : frame ",
+		"[19] : frame "
 		};
 		size_t length = sizeof(charaList) / sizeof(char*);
 
